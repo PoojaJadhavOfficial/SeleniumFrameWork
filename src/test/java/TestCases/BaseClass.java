@@ -1,5 +1,7 @@
 package TestCases;
 
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
@@ -11,6 +13,7 @@ public class BaseClass {
 	public static String password = "paheqAg";
 
 	public static WebDriver driver;
+	public static Logger logger;
 	
 	
     @BeforeClass
@@ -18,6 +21,9 @@ public class BaseClass {
 		
 		System.setProperty("webdriver.driver.chromedriver", "/Users/poojajadhav/eclipse-workspace/SeleniumFramework/Drivers/chromedriver");
 		driver=new ChromeDriver();
+		
+		logger = Logger.getLogger("E-Banking");
+		PropertyConfigurator.configure("log4j.properties");
 
 	}
 
