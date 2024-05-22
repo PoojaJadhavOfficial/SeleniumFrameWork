@@ -51,10 +51,10 @@ public class ReadConfig {
 		String firefoxpath = pro.getProperty("geckoPath");
 		return firefoxpath;
 	}
-	public String geIEpath() {
+	public String getedgepath() {
 
-		String IEpath = pro.getProperty("IEpath");
-		return IEpath;
+		String edgepath = pro.getProperty("edgepath");
+		return edgepath;
 	}
 	
 

@@ -9,10 +9,7 @@ public class TC_001_LoginPage extends BaseClass{
 
 	@Test
 	public  void LoginTest() {
-		
-		driver.get(BaseURL);
-		logger.info("Launced Test Page");
-		
+				
 		LoginPage_PO lp=new LoginPage_PO(driver);
 		
 		lp.setUsername(username);
