@@ -6,20 +6,24 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
 
-public class BaseClass {
+import Utilities.ReadConfig;
 
-	public static String BaseURL = "https://demo.guru99.com/V4/";
-	public static String username = "mngr570900";
-	public static String password = "paheqAg";
+public class BaseClass {
+	
+	ReadConfig readconfig = new ReadConfig();
+
+	public  String BaseURL = readconfig.getApplicationURL();
+	public  String username = readconfig.getUsername();
+	public  String password = readconfig.getPassword();
 
 	public static WebDriver driver;
 	public static Logger logger;
 	
 	
     @BeforeClass
-	public static void setup() {
+	public  void setup() {
 		
-		System.setProperty("webdriver.driver.chromedriver", "/Users/poojajadhav/eclipse-workspace/SeleniumFramework/Drivers/chromedriver");
+		System.setProperty("webdriver.driver.chromedriver", readconfig.getChromepath());
 		driver=new ChromeDriver();
 		
 		logger = Logger.getLogger("E-Banking");
@@ -28,7 +32,7 @@ public class BaseClass {
 	}
 
     @AfterClass
-	public static void teardown() {
+	public  void teardown() {
     	driver.quit();
 
 	}
