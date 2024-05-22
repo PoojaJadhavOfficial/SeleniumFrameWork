@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="NetBanking">
+	
+	<listeners>
+		<listener class-name="Utilities.Reporting"/>
+		
+	</listeners>
+
+	<test name="Banking App Test">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="TestCases.TC_001_LoginPage" />
+		</classes>
+	</test>
+
+</suite>
+
+
+
+
+
+
+
