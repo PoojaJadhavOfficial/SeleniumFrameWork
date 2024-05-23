@@ -10,7 +10,9 @@
 	<test name="Banking App Test">
 		<parameter name="browser" value="chrome" />
 		<classes>
-			<class name="TestCases.TC_001_LoginPage" />
+			<!--<class name="TestCases.TC_001_LoginPage" />-->
+		    <class name="TestCases.TC_002_LoginTest_DDT" />
+
 		</classes>
 	</test>
 
