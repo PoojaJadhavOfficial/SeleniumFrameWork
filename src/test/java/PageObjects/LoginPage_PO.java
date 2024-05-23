@@ -29,6 +29,9 @@ public class LoginPage_PO extends BaseClass {
 	@FindBy(name="btnLogin")
 	WebElement loginBtn;
 	
+	@FindBy(xpath="/html/body/div[3]/div/ul/li[15]/a")
+	WebElement lnkLogout;
+	
 	public  void setUsername(String usrnm)
 	{
 		userName.sendKeys(usrnm);
@@ -42,6 +45,11 @@ public class LoginPage_PO extends BaseClass {
 	public  void clickLogin()
 	{
 		loginBtn.click();
+	}
+	
+	public void clickLogout()
+	{
+		lnkLogout.click();
 	}
 
 }

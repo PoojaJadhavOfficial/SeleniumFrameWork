@@ -14,7 +14,7 @@ public class TC_002_LoginTest_DDT extends BaseClass
 {
 	
 	@Test(dataProvider="LoginData")
-	public void loginDDT(String user,String pwd) throws InterruptedException
+	public void loginDDT(String user,String pwd) throws InterruptedException, IOException
 	{
 		LoginPage_PO lp=new LoginPage_PO(driver);
 		lp.setUsername(username);
@@ -29,6 +29,7 @@ public class TC_002_LoginTest_DDT extends BaseClass
 				
 		if(isAlertPresent()==true)
 		{
+			captureScreen(driver,"loginDDTr");
 			driver.switchTo().alert().accept();//close alert
 			driver.switchTo().defaultContent();
 			Assert.assertTrue(false);
