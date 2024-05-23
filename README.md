@@ -35,16 +35,16 @@ This repository contains a Selenium-based test automation framework built using 
 
 ### Configuration
 1. **WebDriver Configuration:**
-   - Set the WebDriver executable path in `WebDriverUtil.java`.
+   - Set the WebDriver executable path in config.properties file.
    - Example for ChromeDriver:
      ```java
      System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
      ```
 2. **Test Data Configuration:**
    - Store your test data in an Excel file located in the `resources` folder.
-   - Update the file path in `ExcelUtil.java`:
+   - Update the file path in `XLUtil.java`:
      ```java
-     String excelFilePath = "src/main/resources/testdata.xlsx";
+     String excelFilePath = "src/main/TestData/LoginData.xlsx";
      ```
 
 ## Running Tests
